@@ -1,7 +1,16 @@
 <h1>Hello world!</h1>
 
 <body>
+    <script>
+        function play() {
+          var audio = document.getElementById("audio");
+          audio.play();
+        }
+      </script>
+
+    <audio id="audio" src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
 
     <button type="button" onclick="alert('please clap.')">first button</button>
+    <button type="button" onclick="play()">audio button</button>
 
 </body>
