@@ -2,15 +2,22 @@
 
 <body>
     <script>
-        function play() {
-          var audio = document.getElementById("audio");
+        function play(dayname) {
+          var audio = document.getElementById(dayname);
           audio.play();
         }
       </script>
 
-    <audio id="audio" src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
+    <audio id="monday" src="audio/case of the mondays mp3.wav"></audio>
+    <audio id="tuesday" src="audio/happy tuesday.wav"></audio>
+    <audio id="wednesday" src="audio/happy wednesday.wav"></audio>
+    <audio id="thursday" src="audio/happy thursday.wav"></audio>
+    <audio id="friday" src="audio/happy friday.wav"></audio>
 
-    <button type="button" onclick="alert('please clap.')">first button</button>
-    <button type="button" onclick="play()">audio button</button>
+    <button type="button" onclick="play('monday')">Monday</button>
+    <button type="button" onclick="play('tuesday')">Tuesday</button>
+    <button type="button" onclick="play('wednesday')">Wednesday</button>
+    <button type="button" onclick="play('thursday')">Thursday</button>
+    <button type="button" onclick="play('friday')">Friday</button>
 
 </body>
