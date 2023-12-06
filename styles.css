@@ -1,0 +1,43 @@
+body {
+    background-color: powderblue;
+  }
+  h1 {
+    color: blue;
+  }
+  p {
+    color: red;
+}
+
+.pagelayout {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerStyle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    /* margin: 20px; */
+    width: 1000px;
+    max-width: fit-content;
+}
+
+.garfieldthumbStyle {
+    width: 100px;
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    max-width: fit-content;
+}
+
+.display {
+
+}

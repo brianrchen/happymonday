@@ -1,29 +1,59 @@
-<h1>What day is it.</h1>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
-<body>
+<audio id="monday" src="audio/case of the mondays mp3.wav"></audio>
+<audio id="tuesday" src="audio/happy tuesday.wav"></audio>
+<audio id="wednesday" src="audio/happy wednesday.wav"></audio>
+<audio id="thursday" src="audio/happy thursday.wav"></audio>
+<audio id="friday" src="audio/happy friday.wav"></audio>
+
+<body class="pagelayout">
     <script>
+        var numMondayClicks=0;
+
         function play(dayname) {
           var audio = document.getElementById(dayname);
           audio.play();
+
+          if (dayname == "monday") {
+            numMondayClicks+=1;
+
+            if (numMondayClicks == 2) {
+              document.getElementById("displayPanel").innerHTML = "second click";
+            } else if (numMondayClicks > 2) {
+              document.getElementById("displayPanel").innerHTML = "2nd+ click";
+            }
+          } else if (dayname == "friday") {
+            document.getElementById("displayPanel").innerHTML = "display friday";
+          } 
         }
       </script>
 
-    <audio id="monday" src="audio/case of the mondays mp3.wav"></audio>
-    <audio id="tuesday" src="audio/happy tuesday.wav"></audio>
-    <audio id="wednesday" src="audio/happy wednesday.wav"></audio>
-    <audio id="thursday" src="audio/happy thursday.wav"></audio>
-    <audio id="friday" src="audio/happy friday.wav"></audio>
+<h1 class="headerStyle">
+  <img class="garfieldthumbStyle" src="visual/garfield-thumbs.gif">
+  <!-- <img src="visual/garfield-thumbs.gif" width="100" height="100"> -->
+  <div>What day is it.</div>
+  <img class="garfieldthumbStyle" src="visual/garfield-thumbs.gif">
+  <!-- <img src="visual/garfield-thumbs.gif"> -->
+</h1>
 
+  <div class="buttons">
     <button type="button" onclick="play('monday')">Monday</button>
     <button type="button" onclick="play('tuesday')">Tuesday</button>
     <button type="button" onclick="play('wednesday')">Wednesday</button>
     <button type="button" onclick="play('thursday')">Thursday</button>
     <button type="button" onclick="play('friday')">Friday</button>
+  </div>
+
+  <div id="displayPanel" class="displayPanel">
+
+  </div>
 
     <!-- case of the mondays embed-->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/uiik3zS4y4I?si=hfseuz7lJqxaAQo2&amp;start=77" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/uiik3zS4y4I?si=hfseuz7lJqxaAQo2&amp;start=77" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
     <!-- case of the mondays followup embed -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/A4B0pLDqYqI?si=xDt3_9zc4yshRePb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/A4B0pLDqYqI?si=xDt3_9zc4yshRePb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
 </body>
